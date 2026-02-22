@@ -15,7 +15,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://chatbotai.com.tr"),
+  metadataBase: new URL("https://botunvar.com"),
   title: "ChatBotAI · İşletmenize Özel AI Chatbot",
   description:
     "Web sitenize yapay zeka destekli chatbot ekleyin. 7/24 müşteri hizmeti, sektörünüze özel eğitim, kolay entegrasyon. Türkiye'nin AI chatbot çözümü.",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
       "Web sitenize yapay zeka destekli chatbot ekleyin. 7/24 müşteri hizmeti, sektörünüze özel eğitim.",
     type: "website",
     locale: "tr_TR",
-    url: "https://chatbotai.com.tr",
+    url: "https://botunvar.com",
     siteName: "ChatBotAI",
     images: [
       {
@@ -63,7 +63,7 @@ const jsonLd = {
       "@type": "Organization",
       name: "ChatBotAI",
       description: "İşletmelere özel AI chatbot çözümleri",
-      url: "https://chatbotai.com.tr",
+      url: "https://botunvar.com",
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "+90-554-969-0011",
