@@ -2,9 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 import { categories } from "@/lib/categories";
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+function getOpenAI() {
+  return new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+}
 
 // Rate limiting: dakikada max 10 istek + günde max 50 mesaj per IP
 const rateLimitMap = new Map<
@@ -143,7 +143,7 @@ export async function POST(request: NextRequest) {
       content: m.content,
     }));
 
-    const response = await openai.responses.create({
+    const response = await getOpenAI().responses.create({
       model: "gpt-4.1-mini",
       instructions: cat.systemPrompt,
       input: validMessages,
