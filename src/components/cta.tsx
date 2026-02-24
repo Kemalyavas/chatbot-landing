@@ -12,7 +12,7 @@ export default function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-[2rem] bg-ink p-12 sm:p-16 lg:p-20"
+          className="relative overflow-hidden rounded-[2rem] bg-ink p-6 sm:p-16 lg:p-20"
         >
           {/* Background decorations */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-terracotta/8 rounded-full blur-[100px]" />
@@ -41,7 +41,7 @@ export default function CTA() {
                 href="https://wa.me/905549690011?text=Merhaba%2C%20AI%20chatbot%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between px-8 py-5 bg-[#25D366] text-white rounded-2xl hover:shadow-2xl hover:shadow-[#25D366]/20 transition-all duration-300"
+                className="group flex items-center justify-between px-5 sm:px-8 py-5 bg-[#25D366] text-white rounded-2xl hover:shadow-2xl hover:shadow-[#25D366]/20 transition-all duration-300"
               >
                 <div className="flex items-center gap-3">
                   <MessageCircle className="w-5 h-5" />
@@ -57,7 +57,7 @@ export default function CTA() {
 
               <a
                 href="tel:+905549690011"
-                className="group flex items-center justify-between px-8 py-5 bg-white/10 text-cream rounded-2xl border border-white/10 hover:bg-white/15 transition-all duration-300"
+                className="group flex items-center justify-between px-5 sm:px-8 py-5 bg-white/10 text-cream rounded-2xl border border-white/10 hover:bg-white/15 transition-all duration-300"
               >
                 <div className="flex items-center gap-3">
                   <Phone className="w-4 h-4 text-stone-400" />
@@ -72,12 +72,12 @@ export default function CTA() {
 
               <a
                 href="mailto:chatbotaidestek@gmail.com"
-                className="group flex items-center justify-between px-8 py-5 bg-white/10 text-cream rounded-2xl border border-white/10 hover:bg-white/15 transition-all duration-300"
+                className="group flex items-center justify-between px-5 sm:px-8 py-5 bg-white/10 text-cream rounded-2xl border border-white/10 hover:bg-white/15 transition-all duration-300"
               >
                 <div className="flex items-center gap-3">
                   <Mail className="w-4 h-4 text-stone-400" />
                   <div>
-                    <div className="text-sm font-semibold">
+                    <div className="text-sm font-semibold break-all sm:break-normal">
                       chatbotaidestek@gmail.com
                     </div>
                     <div className="text-xs text-stone-500 mt-0.5">

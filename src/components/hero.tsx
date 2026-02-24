@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="absolute top-20 -left-32 w-[500px] h-[500px] bg-terracotta-soft/40 rounded-full blur-[120px] blob-animate" />
       <div className="absolute bottom-20 -right-32 w-[400px] h-[400px] bg-teal-soft/30 rounded-full blur-[100px] blob-animate" style={{ animationDelay: "-4s" }} />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full pt-28 pb-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-28 pb-20">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-6 items-center">
           {/* Left content */}
           <div className="lg:col-span-7">
@@ -46,7 +46,7 @@ export default function Hero() {
             >
               <a
                 href="#demo"
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-ink text-cream font-semibold rounded-full hover:bg-stone-800 transition-all duration-300 hover:shadow-2xl hover:shadow-ink/15 hover:gap-4"
+                className="group inline-flex items-center gap-3 px-8 py-4 bg-ink text-cream font-semibold rounded-full hover:bg-stone-800 transition-all duration-300 hover:shadow-2xl hover:shadow-ink/15 hover:gap-4 shadow-lg shadow-ink/10"
               >
                 Canlı Demo Deneyin
                 <ArrowDownRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5" />

@@ -70,7 +70,7 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-ink"
+            className="md:hidden p-2 text-ink relative z-50"
             aria-label={mobileOpen ? "Menüyü kapat" : "Menüyü aç"}
             aria-expanded={mobileOpen}
           >
@@ -80,25 +80,37 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-stone-200 pt-4 space-y-1" role="menu" aria-label="Ana menü">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="block px-4 py-3 text-sm font-medium text-ink-muted hover:text-ink hover:bg-cream-dark rounded-xl transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="#cta"
+          <>
+            {/* Backdrop */}
+            <div
+              className="md:hidden fixed inset-0 top-0 bg-black/20 backdrop-blur-sm z-40"
               onClick={() => setMobileOpen(false)}
-              className="block mx-4 mt-3 text-center px-5 py-3 bg-ink text-cream text-sm font-semibold rounded-full"
+            />
+            {/* Menu panel */}
+            <div
+              className="md:hidden fixed top-[60px] right-4 left-4 z-50 bg-cream border border-stone-200 rounded-2xl shadow-2xl shadow-ink/10 p-4 space-y-1"
+              role="menu"
+              aria-label="Ana menü"
             >
-              İletişime Geçin
-            </a>
-          </div>
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="block px-4 py-3 text-sm font-medium text-ink-muted hover:text-ink hover:bg-cream-dark rounded-xl transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <a
+                href="#cta"
+                onClick={() => setMobileOpen(false)}
+                className="block mt-2 text-center px-5 py-3 bg-ink text-cream text-sm font-semibold rounded-full"
+              >
+                İletişime Geçin
+              </a>
+            </div>
+          </>
         )}
       </div>
     </nav>
